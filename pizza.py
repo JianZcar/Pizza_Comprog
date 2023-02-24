@@ -1,14 +1,11 @@
-AddOns_Dictionary = {'Cheese': 100, 'Mozzarella Cheese': 150, 'Pepper': 80, 'Bacon Ham': 120, 'Mushroom': 130,
-                     'Onions Chili': 110, 'Tomato': 90, 'Pineapple': 100, 'Salami': 120}
+AddOns_Dictionary = {
+    'Cheese': 100, 'Mozzarella Cheese': 150, 'Pepper': 80, 'Bacon Ham': 120, 'Mushroom': 130, 'Onions Chili': 110,
+    'Tomato': 90, 'Pineapple': 100, 'Salami': 120
+}
 
 
 def total(x):
-    a = [0]
-    y = 0
-    for price in [AddOns_Dictionary[key] for key in x]:
-        y += price
-        a[0] = y
-    return a[0]
+    return sum([AddOns_Dictionary[key] for key in x])
 
 
 def display_list(y):
@@ -29,7 +26,8 @@ def special_addon():
 
 
 def primo_addon():
-    primo_pizza = ['Mozzarella Cheese', 'Pepper', 'Bacon Ham', 'Mushroom', 'Onions Chili', 'Tomato', 'Pineapple',
-                   'Salami']
+    primo_pizza = [
+        'Mozzarella Cheese', 'Pepper', 'Bacon Ham', 'Mushroom', 'Onions Chili', 'Tomato', 'Pineapple', 'Salami'
+    ]
     display_list(primo_pizza)
     return total(primo_pizza)
