@@ -1,4 +1,4 @@
-import Pizza
+import pizza
 
 
 FinalPizzaChoice = {}
@@ -37,20 +37,20 @@ def pizza_addon(x, y):
 
 base = 450
 customer_name = input('Name : ')
-pizza = module_chooser(['Deluxe', 'Special', 'Primo'])
+pizza_toppings = module_chooser(['Deluxe', 'Special', 'Primo'])
 
 print('\n')
 print('--Details--')
 print('Base :', base)
 
-if pizza == 1:
-    pizza_addon(Pizza.deluxe_addon(), 'Deluxe')
+if pizza_toppings == 1:
+    pizza_addon(pizza.deluxe_addon(), 'Deluxe')
 
-elif pizza == 2:
-    pizza_addon(Pizza.special_addon(), 'Special')
+elif pizza_toppings == 2:
+    pizza_addon(pizza.special_addon(), 'Special')
 
-elif pizza == 3:
-    pizza_addon(Pizza.primo_addon(), 'Primo')
+elif pizza_toppings == 3:
+    pizza_addon(pizza.primo_addon(), 'Primo')
 
 print('\n')
 print(FinalPizzaChoice)
